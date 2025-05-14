@@ -58,15 +58,25 @@ Run the Jupyter Notebook:
 
 ---
 
-## Attack Results Summary
+### Accuracy Comparison Before Transfer (Evaluated on ResNet-34)
 
-| Dataset              | ResNet-34 Top-1 / Top-5 | DenseNet-121 Top-1 / Top-5 |
-|----------------------|--------------------------|-----------------------------|
-| Clean (Original)     | 70.4% / 93.2%            | 70.8% / 91.2%               |
-| FGSM (ε = 0.02)      | 5.0% / 29.8%             | 58.8% / 84.8%               |
-| PGD (ε = 0.02)       | 0.0% / 7.2%              | 58.8% / 87.0%               |
-| UAP (ε = 0.02)       | 11.4% / 85.0%            | 68.2% / 89.0%               |
-| Patch (ε = 0.5)      | 41.5% / 72.0%            | 68.6% / 89.6%               |
+| *Dataset*       | *Top-1 Accuracy* | *Top-5 Accuracy* |
+|-----------------|------------------|------------------|
+| *Clean Set*     | 0.7620           | 0.9420           |
+| *FGSM*          | 0.2640           | 0.5060           |
+| *PGD*           | 0.0040           | 0.0680           |
+| *Patch Attack*  | 0.2400           | 0.4660           |
+
+---
+
+### Transferability Evaluation (Evaluated on DenseNet-121)
+
+| *Dataset*       | *Top-1 Accuracy* | *Top-5 Accuracy* |
+|-----------------|------------------|------------------|
+| *Clean Set*     | 0.7480           | 0.9360           |
+| *FGSM*          | 0.4240           | 0.6660           |
+| *PGD*           | 0.3900           | 0.6340           |
+| *Patch Attack*  | 0.4440           | 0.6640           |
 
 ---
 
@@ -116,7 +126,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 | Script/Notebook       | Purpose                         | Input                  | Output                     |
 |-----------------------|----------------------------------|------------------------|----------------------------|
-| `DL_project_3.ipynb`  | Run all attacks & evaluations    | `TestDataSet/`         | Adversarial images, CSV logs |
+| `dl-project3-tests-final.ipynb`  | Run all attacks & evaluations    | `TestDataSet/`         | Adversarial images, CSV logs |
 
 ---
 
