@@ -18,7 +18,7 @@ This repository implements adversarial attacks on a ResNet-34 model pre-trained 
 
 ## Project Structure
 
-- **DL_project_3.ipynb**  # Contains all attack implementations, evaluation logic, and result logging
+- **dl-project3-tests-final.ipynb.ipynb**  # Contains all attack implementations, evaluation logic, and result logging
 
 ## Installation
 
